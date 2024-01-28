@@ -1,0 +1,3 @@
+[submodule "Lecture_code"]
+	path = Lecture_code
+	url = https://github.khoury.northeastern.edu/CS5004-SEA-Spr2024/Lecture_code.git
