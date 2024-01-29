@@ -5,25 +5,25 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 class MailItemTest {
-    private MailIterm testMailItem;
+    private MailItem testMailItem;
     private Recipient testRecipient;
 
     @BeforeEach
     void setUP() throws DimensionNumericException {
         testRecipient = new Recipient("Wyllie", "Fang", "fang.wenxu@northeastern.edu");
-        testMailItem = new MailIterm(12,8,15,testRecipient);
+        testMailItem = new MailItem(12,8,15,testRecipient);
     }
 
     @Test
     void testMailItemConstructor() {
         assertThrows(DimensionNumericException.class, ()-> {
-            new MailIterm(0, 8, 15,testRecipient);
+            new MailItem(0, 8, 15,testRecipient);
         });
         assertThrows(DimensionNumericException.class, ()-> {
-            new MailIterm(12, -1, 15,testRecipient);
+            new MailItem(12, -1, 15,testRecipient);
         });
         assertThrows(DimensionNumericException.class, ()-> {
-            new MailIterm(12, 8, -2,testRecipient);
+            new MailItem(12, 8, -2,testRecipient);
         });
     }
 

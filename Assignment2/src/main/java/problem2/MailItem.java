@@ -3,7 +3,7 @@ package problem2;
 /**
  * Class MailItem stores information about mail item - width, height, depth and recipient
  */
-public class MailIterm {
+public class MailItem {
     private final Integer width;
     private final Integer height;
     private final Integer depth;
@@ -18,7 +18,7 @@ public class MailIterm {
      * @param recipient - recipient, encoded as data type Recipient
      * @throws DimensionNumericException On non-positive number of dimension
      */
-    public MailIterm(Integer width, Integer height, Integer depth, Recipient recipient) throws DimensionNumericException{
+    public MailItem(Integer width, Integer height, Integer depth, Recipient recipient) throws DimensionNumericException{
         if (width < 1.5){
             throw new DimensionNumericException("The width should be greater than or equal to 1.5");
         } else {

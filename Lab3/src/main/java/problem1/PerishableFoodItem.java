@@ -11,8 +11,8 @@ public abstract class PerishableFoodItem extends FoodItem{
     //Create class structure for Perishable Food Item
     public PerishableFoodItem (String name, Double currentPrice, Integer currentQuantity, Integer maxAllowedQuantity, LocalDateTime orderDate, LocalDateTime expirationDate) {
         super(name, currentPrice, currentQuantity, maxAllowedQuantity);
-        this.orderDate = orderDate;
-        this.expirationDate = expirationDate;
+        this.orderDate = orderDate;  //?encoded as an Integer, representing the number of days since May15, 2021
+        this.expirationDate = expirationDate;  //?encoded as an Integer, representing the number of days since December31, 2021
     }
 
     public LocalDateTime getOrderDate() {
@@ -45,7 +45,6 @@ public abstract class PerishableFoodItem extends FoodItem{
     public int hashCode() {
         return Objects.hash(super.hashCode(), orderDate, expirationDate);
     }
-
 
     //String code
     @Override
