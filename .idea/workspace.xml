@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2585acbd-179f-4ad4-a48a-7c355ee6b90b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture_code" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture_code" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lecture_code/Lecture3/src/test/java/bankingSystem/CheckingAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture_code/Lecture3/src/test/java/bankingSystem/CheckingAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +116,7 @@
       <workItem from="1706206905418" duration="63000" />
       <workItem from="1706211113595" duration="124000" />
       <workItem from="1706248790735" duration="1272000" />
+      <workItem from="1706562544686" duration="178000" />
     </task>
     <servers />
   </component>

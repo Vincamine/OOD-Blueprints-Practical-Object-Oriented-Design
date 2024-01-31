@@ -9,6 +9,7 @@ public class Event {
     private String clientName;
     private int numberOfPeople;
 
+
     /**
      * Creates an event.
      * @param clientName the name of the client.

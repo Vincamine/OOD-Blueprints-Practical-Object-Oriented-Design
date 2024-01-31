@@ -7,6 +7,7 @@ package problem1;
  */
 public class LunchEvent extends Event {
     private int numberOfSandwiches;
+    private double numberOfTimesSandwichesToProvide = 1.05;
 
     /**
      * Creates a lunch event.
@@ -16,7 +17,7 @@ public class LunchEvent extends Event {
      */
     public LunchEvent(String clientName, int numberOfPeople){
         super(clientName, numberOfPeople);
-        this.numberOfSandwiches = (int) Math.round(1.05 * super.getNumberOfPeople());
+        this.numberOfSandwiches = (int) Math.round(numberOfTimesSandwichesToProvide * super.getNumberOfPeople());
     }
 
     /**
