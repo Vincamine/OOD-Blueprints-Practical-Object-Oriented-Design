@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>problem1</OriginalElement>
+  <nodes>
+    <node x="373.0" y="675.0">problem1.InvalidAgeException</node>
+    <node x="139.0" y="675.0">problem1.Name</node>
+    <node x="811.25" y="163.0">problem1.ProficiencyLevel</node>
+    <node x="573.25" y="48.0">problem1.Artist</node>
+    <node x="1067.75" y="424.0">problem1.Musician</node>
+    <node x="1389.041988002232" y="424.0">problem1.NPODesigner</node>
+    <node x="567.8888888888888" y="595.0">problem1.Filmmaker</node>
+    <node x="1007.75" y="595.0">problem1.Actor</node>
+    <node x="531.25" y="133.0">problem1.AbstractArtist</node>
+    <node x="796.75" y="409.0">problem1.MultimediaArtist</node>
+    <node x="305.6542696707588" y="595.0">problem1.Photographer</node>
+    <node x="139.0" y="595.0">problem1.Painter</node>
+    <node x="483.75" y="424.0">problem1.Poet</node>
+    <node x="856.75" y="595.0">problem1.Dancer</node>
+    <node x="273.75" y="439.0">problem1.GraphicArtist</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="problem1.Dancer" target="problem1.MultimediaArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-17.5" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="problem1.GraphicArtist" target="problem1.AbstractArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-38.0" />
+      <point x="368.75" y="384.0" />
+      <point x="630.25" y="384.0" />
+      <point x="0.0" y="113.0" />
+    </edge>
+    <edge source="problem1.Painter" target="problem1.GraphicArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-17.5" />
+      <point x="204.0" y="570.0" />
+      <point x="368.75" y="570.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="problem1.Photographer" target="problem1.GraphicArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-17.5" />
+      <point x="402.1542696707588" y="570.0" />
+      <point x="368.75" y="570.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="problem1.MultimediaArtist" target="problem1.AbstractArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-68.0" />
+      <point x="922.25" y="384.0" />
+      <point x="630.25" y="384.0" />
+      <point x="0.0" y="113.0" />
+    </edge>
+    <edge source="problem1.Musician" target="problem1.AbstractArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-53.0" />
+      <point x="1199.75" y="384.0" />
+      <point x="630.25" y="384.0" />
+      <point x="0.0" y="113.0" />
+    </edge>
+    <edge source="problem1.AbstractArtist" target="problem1.Artist" relationship="REALIZATION">
+      <point x="0.0" y="-113.0" />
+      <point x="0.0" y="17.5" />
+    </edge>
+    <edge source="problem1.Actor" target="problem1.MultimediaArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-17.5" />
+      <point x="1065.25" y="570.0" />
+      <point x="922.25" y="570.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="problem1.Poet" target="problem1.AbstractArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-53.0" />
+      <point x="0.0" y="113.0" />
+    </edge>
+    <edge source="problem1.Filmmaker" target="problem1.MultimediaArtist" relationship="GENERALIZATION">
+      <point x="0.0" y="-17.5" />
+      <point x="648.3888888888888" y="570.0" />
+      <point x="922.25" y="570.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="problem1.NPODesigner" target="problem1.AbstractArtist" relationship="GENERALIZATION">
+      <point x="-0.0" y="-53.0" />
+      <point x="1549.541988002232" y="346.5" />
+      <point x="99.0" y="100.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5968729846878119" showDependencies="false" x="882.9665146449495" y="282.00377727270956" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

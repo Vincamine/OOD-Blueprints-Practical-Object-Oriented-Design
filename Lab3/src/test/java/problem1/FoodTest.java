@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
 
 //Create Test variables
-class FoodItemTest {
+class FoodTest {
     private Fruit testFruit;
     private LocalDateTime testOrderDate;
     private LocalDateTime testExpirationDate;
