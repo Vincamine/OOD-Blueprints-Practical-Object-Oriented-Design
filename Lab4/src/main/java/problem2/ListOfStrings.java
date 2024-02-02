@@ -4,9 +4,8 @@ public interface ListOfStrings {
     Boolean isEmpty();
     Integer size();
     Boolean contains(String element);
-    Boolean containsAll(ListOfStrings sub);
-    ListOfStrings filterLargerThan(Integer );
+    Boolean containsAll(String[] allElements);
+    ListOfStrings filterLargerThan(Integer largerThanBound);
     Boolean hasDuplicates();
     ListOfStrings removedDuplicates();
-
 }

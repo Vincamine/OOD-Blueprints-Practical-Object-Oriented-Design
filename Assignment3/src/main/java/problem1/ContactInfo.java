@@ -1,11 +1,11 @@
 package problem1;
 
 public class ContactInfo {
-    private Name name;
-    private String address;
-    private String phoneNumber;
-    private String emailAddress;
-    private Name emergencyContact;
+    protected Name name;
+    protected String address;
+    protected String phoneNumber;
+    protected String emailAddress;
+    protected Name emergencyContact;
 
 
 }

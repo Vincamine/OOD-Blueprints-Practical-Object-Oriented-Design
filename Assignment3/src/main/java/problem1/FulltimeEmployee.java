@@ -100,8 +100,6 @@ public class FulltimeEmployee extends Employee {
     }
 
     // Override methods such as equals, hashCode, and toString as needed.
-
-
     @Override
     public String toString() {
         return "FulltimeEmployee{" +
