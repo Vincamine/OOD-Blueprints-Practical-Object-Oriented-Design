@@ -13,6 +13,7 @@ import java.util.Objects;
  */
 public class ParttimeEmployee extends Employee {
     private static final double RATE_OF_PRODUCTIVITY_ESTIMATE_FOR_PARTTIME_EMPLOYEE = 3.7;
+    protected static final double RATE_OF_EMPLOYMENT_LEVEL_BONUS = 1.4;
     private double contractualNumberOfWorkedHours;
     private double actualNumberOfWorkedHours;
     private double bonusAndOvertimeEarnings;
@@ -83,12 +84,6 @@ public class ParttimeEmployee extends Employee {
             && Double.compare(bonusAndOvertimeEarnings, that.bonusAndOvertimeEarnings) == 0;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), contractualNumberOfWorkedHours,
-            actualNumberOfWorkedHours,
-            bonusAndOvertimeEarnings);
-    }
 
     /**
      * Base productivity estimate for part-time employees:

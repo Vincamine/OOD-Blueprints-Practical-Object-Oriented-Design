@@ -109,6 +109,7 @@ public class Employee implements ProductivityEstimate {
      */
     @Override
     public double estimateProductivity(){
+        double productivity = this.baseProductivityEstimate;
         if (this.employmentLevel == EmploymentLevel.INTERMEDIATE_LEVEL){
             this.baseProductivityEstimate += RATE_OF_EMPLOYMENT_LEVEL_BONUS;
         }

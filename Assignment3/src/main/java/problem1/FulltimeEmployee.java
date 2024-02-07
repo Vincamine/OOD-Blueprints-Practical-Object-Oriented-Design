@@ -68,17 +68,21 @@ public class FulltimeEmployee extends Employee {
      * @return The estimated productivity value of the full-time employee.
      * */
     @Override
-    public double estimateProductivity(){
+    public double estimateProductivity() {
         double baseProductivityEstimate = lastYearEarning / basePay;
-        if(numberOfProjects > NUMBER_OF_PROJECTS_TO_GET_BONUS){
-            baseProductivityEstimate *= RATE_OF_PROJECTS_BONUS;
+        if (numberOfProjects > NUMBER_OF_PROJECTS_TO_GET_BONUS) {
+            //baseProductivityEstimate = 5000/4000 * 1.5;
+            baseProductivityEstimate += RATE_OF_PROJECTS_BONUS;
         }
-        if((THIS_YEAR - dataOfLastPromotion.getYear()) > NUMBER_OF_YEARS_TO_GET_LAST_PROMOTION_PENALTY){
-            baseProductivityEstimate *= RATE_OF_LAST_PROMOTION_PENALTY;
+
+        if ((THIS_YEAR - dataOfLastPromotion.getYear())
+            > NUMBER_OF_YEARS_TO_GET_LAST_PROMOTION_PENALTY) {
+            baseProductivityEstimate -= RATE_OF_LAST_PROMOTION_PENALTY;
         }
         return baseProductivityEstimate;
     }
 
+    /*getters*/
     public double getBasePay() {
         return basePay;
     }
@@ -134,4 +138,5 @@ public class FulltimeEmployee extends Employee {
         return Objects.hash(super.hashCode(), basePay, bonuses, overtime, dataOfLastPromotion,
             numberOfProjects);
     }
+
 }

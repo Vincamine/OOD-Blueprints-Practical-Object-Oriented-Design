@@ -1,6 +1,7 @@
 package problem1;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class IndividualContributor extends FulltimeEmployee{
     private static final int NUMBERS_OF_PUBLICATIONS = 4;
@@ -30,5 +31,55 @@ public class IndividualContributor extends FulltimeEmployee{
         return baseProductivityEstimate;
     }
 
+    /**
+     * return numberOfPatents
+     * @return numberOfPatents
+     */
+    public Integer getNumberOfPatents() {
+        return numberOfPatents;
+    }
+
+    public void setNumberOfPatents(Integer numberOfPatents) {
+        this.numberOfPatents = numberOfPatents;
+    }
+
+    public Integer getNumberOfPublications() {
+        return numberOfPublications;
+    }
+
+    public void setNumberOfPublications(Integer numberOfPublications) {
+        this.numberOfPublications = numberOfPublications;
+    }
+
+    public Integer getNumberOfExternalCollaborations() {
+        return numberOfExternalCollaborations;
+    }
+
+    public void setNumberOfExternalCollaborations(Integer numberOfExternalCollaborations) {
+        this.numberOfExternalCollaborations = numberOfExternalCollaborations;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof IndividualContributor that)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+        return Objects.equals(numberOfPatents, that.numberOfPatents)
+            && Objects.equals(numberOfPublications, that.numberOfPublications)
+            && Objects.equals(numberOfExternalCollaborations,
+            that.numberOfExternalCollaborations);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), numberOfPatents, numberOfPublications,
+            numberOfExternalCollaborations);
+    }
 
 }
