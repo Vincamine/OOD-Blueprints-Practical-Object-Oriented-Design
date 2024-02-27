@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * For passing this test,
+ * I change "validateWealthLevel(Double wealthLevel)" method's typo
+ * and comment the lines using class "GameOver"
+ * */
 public class SuperheroTest {
 
     private Superhero superhero;
