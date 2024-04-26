@@ -1,0 +1,114 @@
+----------------------------------------------------------------------------------------------------
+5 points – Project write-up includes a section, describing how to run the program.
+Answer:
+        Just run the main() function in the class RideShareDispatchSimulator. And the result like\
+        "
+        > Task :RideShareDispatchSimulator.main()
+        Simulation with 50 drivers and 25 rides:
+        Average wait time for a ride: 1 minutes and 7 seconds
+        Average number of rides per driver: 0.5
+
+        Simulation with 50 drivers and 100 rides:
+        Average wait time for a ride: 0 minutes and 58 seconds
+        Average number of rides per driver: 2.0
+
+        Simulation with 50 drivers and 250 rides:
+        Average wait time for a ride: 1 minutes and 2 seconds
+        Average number of rides per driver: 5.0
+        "
+
+----------------------------------------------------------------------------------------------------
+5 points – Project write-up includes an overview of the chosen problem, and high-level overview of the solution.
+Answer:
+        Problem Overview: The problem involves simulating a ride-sharing service where customers can request rides through an app, and drivers are dispatched to meet these requests. The simulation must manage various ride types with differing priorities and ensure that drivers are effectively assigned to customers.
+        High-Level Solution Overview:
+            1.Data Models: RideRequest: Represents a customer's request for a ride, including details such as priority, starting location, destination, and anticipated distance.
+                           Driver: Maintains information about individual drivers, including their availability.
+                           Ride: Encapsulates the details of a trip, including the associated the RideRequest, and calculates expected start and end times based on distance and speed.
+            2.Event System:Event Interface & RideRequestedEvent and RideFinishedEvent
+            3.Simulation Core:
+            the class RideShareDispatchSimulator: The main class that coordinates the simulation, maintaining queues for ride requests and active rides, and a list of drivers. It processes events, assigns rides to drivers, and calculates performance metrics.
+            4.Simulation Process.
+
+----------------------------------------------------------------------------------------------------
+10 points – Project write-up includes a description of key challenges encountered during design and implementation, and how those challenges were addressed.
+Answer:
+        For me, the key challenges began at the foundational level—fully understanding the requirements of the simulation system and formulating an initial design.
+        To tackle this, I had to meticulously dissect the project specifications. I broke down the requirements into smaller, manageable components, allowing me to map out the necessary classes and their interactions.
+        In designing the methods for each class, I focused on their core responsibilities. Addressing this challenge was a step-by-step process. I leveraged class diagrams to visualize relationships and employed pseudo-code to outline the logic before delving into actual coding.
+        The exercise sharpened my analytical skills, enhancing my ability to conceptualize a system from scratch and to translate complex requirements into a working design—a vital step in any software development project.
+
+----------------------------------------------------------------------------------------------------
+5 points – Project write-up acknowledges the sources and resources used in the project.
+Answer:
+        For this project, I relied heavily on Oracle's Java documentation to understand the usage of the Timestamp and PriorityQueue classes. This resource was invaluable in ensuring that my implementation adhered to best practices and utilized Java's built-in functionalities efficiently. Additionally, I consulted several tutorials and code examples on platforms like Stack Overflow and GeeksforGeeks, which provided practical insights and common usage patterns.
+
+----------------------------------------------------------------------------------------------------
+25 points – Project write-up contains meaningful answers to all the questions about the software system.
+
+1. Please include a code snippet showing how have you used inheritance and composition in your code.
+Answer:
+The Driver class uses composition as it contains an instance of another class, Ride, in its currentRide attribute.
+
+2. Please include a code snippet showing how have you used an interface or an abstract class in your code.
+Answer:
+The Event is an interface which is implemented by RideRequestedEvent and RideFinishedEvent.
+
+3. Please include code example of a method overriding and method overloading from your code, or explain why you have not used any overloading or overriding.
+Answer:
+The Driver class overrides equals, hashCode, and toString methods from the Object class. This is an example of method overriding.
+
+4. Please include a code example showing how have you used encapsulation, or explain why you did not need encapsulation in your code.
+Answer:
+The Driver class uses encapsulation by keeping its fields id and currentRide private and providing public getter methods to access these properties. This protects the data and makes the class easier to maintain.
+
+5. Please include a code example of subtype polymorphism from your code, or explain why you did not need subtype polymorphism.
+Answer:
+I did not use it. This is not explicitly needed in my simulator as described because the simulation primarily manages its own objects like Driver, Ride, and RideRequest directly without a common interface or superclass beyond the basic Java Object class.
+
+6. Please include a code snippet of generics from your code.
+Answer:
+In the RideShareDispatchSimulator class, generics are used in defining PriorityQueue<RideRequest> and PriorityQueue<Ride>, allowing these collections to operate specifically with RideRequest and Ride objects.
+
+7. Please include a code snippet showing how have you used some of the built-in data collections from the Java Collections Framework, or explain why you had no need for any data collections.
+Answer:
+The RideShareDispatchSimulator class, class utilizes the Java Collections Framework extensively, with PriorityQueue for managing ride requests and active rides, and ArrayList for maintaining lists of drivers and events.
+
+8. Please include a code snippet showing how have you used interfaces Iterable and Iterator, or explain why you had no need for these two interfaces.
+Answer:
+This functionality was not necessary for this simulation as it handles data structures (like PriorityQueue and List) that already implement these interfaces internally.
+
+9. Please include a code snippet showing how have you used interfaces Comparable and Comparator, or explain why you had no need for these two interfaces.
+Answer:
+The simulator uses the Comparator interface to define custom ordering for PriorityQueue objects. This allows the simulation to prioritize ride requests and active rides based on specific attributes (like ride type, distance, and expected end time).
+Here:
+// Comparator<RideRequest> rideRequestComparator = Comparator.comparing(RideRequest::getRideType).thenComparing(RideRequest::getAnticipatedDistance);
+// rideRequestPQueue = new PriorityQueue<>(rideRequestComparator);
+// Comparator<Ride> rideComparator = Comparator.comparing(Ride::getExpectedEndTime);
+// activeRidePQueue = new PriorityQueue<>(rideComparator);
+
+10. Please include a code snippet showing how have you used regular expressions, or explain why you had no need for it.
+Answer:
+I did not utilize regular expressions as there is no text processing or pattern matching requirement evident in the simulation's logic.
+
+11. Please include a code snippet showing how have you used nested classes, or justify why you had no need for nested classes.
+Answer:
+The current design does not require such structuring as each class appears to serve a distinct enough role that warrants a top-level definition.
+
+12. Please include code example showing how have you used components of functional programming, such as lambdas and streams, or explain why you had no need for it in
+your code.
+Answer:
+The RideShareDispatchSimulator class uses functional programming features such as lambda expressions and streams, which are evident in methods like isDriverAvailable and getAvailableDriver. These features enhance readability and efficiency when processing collections of data, such as filtering and finding elements.
+
+13. Please include code snippet(s) showing how have you used creational, structural and/or behavioral design patterns. Please list which design patterns have you used, or explain why you had no need for design patterns in your solution.
+Answer:
+Creational Patterns: The use of constructors in the RideShareDispatchSimulator to initialize lists and priority queues is a fundamental example of the Factory Method pattern.
+Behavioral Patterns: The simulation logic uses the Command pattern to encapsulate a request as an object, allowing parameterization of clients with different requests, queueing.
+
+14. Please include code snippets showing examples of MVC architecture, or justify why you had no need for MVC architecture in your design.
+Answer:
+MVC is more commonly applied in applications with a user interface component. The simulator just focused on backend logic and data handling, where MVC might not be directly relevant or necessary.
+
+15. Please include code examples showing data and stamp coupling in your code.
+Answer:
+My simulator shows data coupling where methods like assignRideToDriver take objects like RideRequest and Driver as parameters to operate on them.
